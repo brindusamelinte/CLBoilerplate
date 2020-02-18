@@ -1,16 +1,342 @@
 <html>
-    <head>
-        <title>CL Boilerplate</title>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon.png" />
-        <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon.png" />
-        <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png" />
-        <link href="css/main.css" rel="stylesheet"/>
-        <script src="./js/out.js" type="text/javascript"></script>
-    </head>
-    <body>
-        <div id="app"></div>
-    </body>
+<head>
+    <title>CL Boilerplate</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="./assets/images/favicon.png"/>
+    <link href="css/main.css" rel="stylesheet"/>
+    <script src="./js/out.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--        <div id="app"></div>-->
+
+<header>
+    <div class="first_content">
+        <span class="logo">
+            <i class="fas fa-map-marked-alt"></i>
+            T.W.M
+        </span>
+        <div class="menu">
+            <button class="menu__button"><i class="fas fa-bars"></i></button>
+        </div>
+        <nav class="navigation">
+            <div class="navigation__main__list">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a class="navigation__link" href="#">Home</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">About</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">Countries</a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">Itinerary</a></li>
+                    <li class="navigation__item hover"><a class="navigation__link" href="#">Transport Maps</a>
+                        <ul class="navigation__list__child">
+                            <li class="navigation__item"><a class="navigation__link" href="#">Metro map</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#">RER and Transilien
+                                map</a>
+                            </li>
+                            <li class="navigation__item"><a class="navigation__link" href="#">Bus map</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#">Night bus map</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#">Airport access</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item"><a class="navigation__link" href="#">Fly Tickets</a></li>
+                </ul>
+            </div>
+            <div class="navigation__secondary__list">
+                <ul class="navigation__list">
+                    <li class="navigation__item hover">
+                        <i class="fas fa-globe-europe"></i>
+                        English
+                        <ul class="navigation__list__child">
+                            <li class="navigation__item">Francais</li>
+                            <li class="navigation__item">Deutsch</li>
+                            <li class="navigation__item">Italiano</li>
+                            <li class="navigation__item">Espanol</li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item subscribe">
+                        <i class="fas fa-paper-plane"></i>
+                        Subscribe
+                        <ul class="navigation__list__child">
+                            <li class="navigation__item">
+                                <form>
+                                    <label for id="email">Subscribe Now</label>
+                                    <input type="email" name="email" placeholder="Email Address">
+                                    <button type="button">Submit</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="second_content" style="background-image: url('assets/images/background.jpeg')">
+        <div class="container">
+            <h1>“Travel is the only thing you buy that makes you richer.”</h1>
+            <h3>The best tips to make tour journey the greatest adventure</h3>
+            <form class="search__cities">
+                <div class="search">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <input class="search" type="text" name="cities" placeholder="Location"/>
+
+                <button class="search" type="button">Search
+                    <i class="fa fa-search"></i>
+                </button>
+
+            </form>
+        </div>
+    </div>
+</header>
+
+<section class="gallery">
+    <button type="button" class="arrow_left"><i class="fas fa-caret-left"></i></button>
+    <ul>
+        <li>
+            <h2>Paris</h2>
+            <p>Clock:</p>
+            <p>Weather:</p>
+        </li>
+        <li class="hide_cities">
+            <h2>Nice</h2>
+            <p>Clock:</p>
+            <p>Weather:</p>
+        </li>
+        <li class="hide_cities">
+            <h2>Cannes</h2>
+            <p>Clock:</p>
+            <p>Weather:</p>
+        </li>
+        <li class="hide_cities">
+            <h2>Budapest</h2>
+            <p>Clock:</p>
+            <p>Weather:</p>
+        </li>
+        <li class="hide_cities">
+            <h2>Granada</h2>
+            <p>Clock:</p>
+            <p>Weather:</p>
+        </li>
+        <li class="hide_cities">
+            <h2>Milan</h2>
+            <p>Clock:</p>
+            <p>Weather:</p>
+        </li>
+        <li class="hide_cities">
+            <h2>Düsseldorf</h2>
+            <p>Clock:</p>
+            <p>Weather:</p>
+        </li>
+        <li class="hide_cities last_li">
+            <h2>Cologne</h2>
+            <p>Clock:</p>
+            <p>Weather:</p>
+        </li>
+    </ul>
+    <button type="button" class="arrow_right"><i class="fas fa-caret-right"></i></button>
+</section>
+
+
+<section class="portfolio">
+    <div class="container">
+        <div class="portfolio__header">
+            <h2>Explore Best Cities</h2>
+            <p>The Gothic Duomo di Milano cathedral</p>
+        </div>
+        <div class="portfolio__cards">
+            <div class="portfolio__card" style="background-image: url('assets/images/paris.jpg')">
+                <h1>Paris</h1>
+                <h4>Capital of France</h4>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.5057154626707!2d2.3409052514474755!3d48.886698606565176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e5ccbe6434d%3A0xd216c2a98b43d24d!2zU2FjcsOpLUPFk3VyIEJhc2lsaWNh!5e0!3m2!1sen!2sro!4v1582020185409!5m2!1sen!2sro"
+                            width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <p>Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy
+                    and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine.
+                    Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the
+                    city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.
+                    The famed Louvre museum houses da Vinci’s “Mona Lisa.” The Musée d’Orsay has Impressionist works by
+                    Monet, Degas and Renoir. On the Seine’s Right Bank, the Montmartre neighborhood is home to
+                    Sacré-Coeur Basilica and sweeping hilltop views. In the Marais, nightclubs sit among restored
+                    17th-century mansions. On the Left Bank are the Latin Quarter, bustling with Sorbonne scholars, and
+                    the historically bohemian Saint-Germain-des-Prés. The city’s open-air cafes are an institution for
+                    casual eating and people-watching. Fine-dining restaurants, bistros, markets and patisseries reflect
+                    other aspects of France's famed culinary heritage.</p>
+            </div>
+            <div class="portfolio__card" style="background-image: url('assets/images/nice.jpg')">
+                <h1>Nice</h1>
+                <h4>City in France</h4>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.7678805101336!2d7.256045951318365!3d43.69458885766846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd00ccaa3ca75%3A0xfa74163e745ef14e!2sThe%20Negresco!5e0!3m2!1sen!2sro!4v1582020538440!5m2!1sen!2sro"
+                            width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <p>Nice, capital of the Alpes-Maritimes department on the French Riviera, sits on the pebbly shores of
+                    the Baie des Anges. Founded by the Greeks and later a retreat for 19th-century European elite, the
+                    city has also long attracted artists. Former resident Henri Matisse is honored with a
+                    career-spanning collection of paintings at Musée Matisse. Musée Marc Chagall features some of its
+                    namesake's major religious works.
+                    The city's Modern and Contemporary Art Museum (or MAMAC) is an imposing modernist structure
+                    displaying avant garde works by French and international artists. Vieux Nice, a maze of medieval
+                    streets, features baroque churches and the colorful Cours Saleya market, famed for its flowers, fish
+                    and produce. The Promenade des Anglais, a boulevard fronting the bay, is lined with grand cafes and
+                    hotels such as the wedding-cake Le Negresco. The birthplace of salade niçoise, Nice is known for
+                    dishes made with olives and seafood, and for the street-food staple, socca (chickpea pancakes).</p>
+            </div>
+            <div class="portfolio__card" style="background-image: url('assets/images/cannes.jpeg')">
+                <h1>Cannes</h1>
+                <h4>City in France</h4>
+                <div style="display: none">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.676541446342!2d7.016410773605297!3d43.55078403869939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce8191f03733bb%3A0xafb954664bccc079!2sPalais%20des%20Festivals!5e0!3m2!1sen!2sro!4v1582020747699!5m2!1sen!2sro"
+                            width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <p style="display: none">Cannes, a resort town on the French Riviera, is famed for its international
+                    film festival. Its Boulevard de la Croisette, curving along the coast, is lined with sandy beaches,
+                    upmarket boutiques and palatial hotels. It’s also home to the Palais des Festivals et des Congrès, a
+                    modern building complete with red carpet and Allée des Étoiles – Cannes’ walk of fame.
+                    The Vieux Port is filled with mammoth yachts, Rue d’Antibes has upscale boutiques and jewelry shops,
+                    and casinos such as circa-1950s fixture Casino Croisette draw high rollers. But a more traditional
+                    Cannes is found in nearby Le Suquet, the old town. Steep, winding streets snake up to the Forville
+                    food market, and the Musée de la Castre displays ethnographic art. Adjacent to the museum is the
+                    Gothic, 17th-century church Notre Dame de l’Espérance, and the neighborhood summit has sweeping
+                    views of the bay.</p>
+            </div>
+            <div class="portfolio__card" style="background-image: url('assets/images/budapest.JPG')">
+                <h1>Budapest</h1>
+                <h4>Capital of Hungary</h4>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.1163848078004!2d19.04347495141189!3d47.507124602735175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc1046d4a33d%3A0x342122b8ff8f0f6e!2sHungarian%20Parliament%20Building!5e0!3m2!1sen!2sro!4v1582020797587!5m2!1sen!2sro"
+                            width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <p>Budapest, Hungary’s capital, is bisected by the River Danube. Its 19th-century Chain Bridge connects
+                    the hilly Buda district with flat Pest. A funicular runs up Castle Hill to Buda’s Old Town, where
+                    the Budapest History Museum traces city life from Roman times onward. Trinity Square is home to
+                    13th-century Matthias Church and the turrets of the Fishermen’s Bastion, which offer sweeping views.
+                    East of the river, Pest’s neo-Gothic Parliament Building houses the Holy Crown of St. Stephen. St.
+                    Stephen’s Basilica displays the saint’s right hand. The Dohány Street Synagogue contains a museum, a
+                    memorial and a cemetery. Grand boulevard Andrássy Avenue passes the neoclassical Hungarian State
+                    Opera House on its way to Heroes’ Square, where statues commemorate the creation of the Hungarian
+                    state, and there are 2 art museums. The ornate Széchenyi thermal baths complex in adjoining City
+                    Park is one of many in Budapest, and part of an enduring Hungarian mineral bathing tradition.</p>
+            </div>
+            <div class="portfolio__card" style="background-image: url('assets/images/granada.jpg')">
+                <h1>Granada</h1>
+                <h4>City in Spain</h4>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3179.0163440510296!2d-3.5903353488237286!3d37.17608255405075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fcb7977fb93b%3A0x808dd1ef1221a27f!2sAlhambra!5e0!3m2!1sen!2sro!4v1582020846516!5m2!1sen!2sro"
+                            width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <p>Granada is a city in southern Spain’s Andalusia region, in the foothills of the Sierra Nevada
+                    mountains. It's known for grand examples of medieval architecture dating to the Moorish occupation,
+                    especially the Alhambra. This sprawling hilltop fortress complex encompasses royal palaces, serene
+                    patios, and reflecting pools from the Nasrid dynasty, as well as the fountains and orchards of the
+                    Generalife gardens.
+                    The Albaicín is a medieval Moorish quarter with narrow streets and views of the Alhambra from the
+                    Gothic San Nicolás church. The 16th-century Granada Cathedral has a renaissance interior, and the
+                    tombs of King Ferdinand and Queen Isabella, the monarchs who united Spain in the 15th-century, are
+                    in the adjoining Royal Chapel. The Granada Charterhouse, a monastery, is known for its Spanish
+                    Baroque interior. The hillside neighborhood of Sacromonte stages flamenco shows in whitewashed cave
+                    houses. Modern city life is characterized by the university, colorful street art murals, and the
+                    tradition of providing free tapas with drinks.</p>
+            </div>
+            <div class="portfolio__card" style="background-image: url('assets/images/milan.jpg')">
+                <h1>Milan</h1>
+                <h4>City in Italy</h4>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.283072199104!2d9.18973245136088!3d45.464101341368064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6aec34636a1%3A0xab7f4e27101a2e13!2sDuomo%20di%20Milano!5e0!3m2!1sen!2sro!4v1582020902131!5m2!1sen!2sro"
+                            width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <p>Milan, a metropolis in Italy's northern Lombardy region, is a global capital of fashion and design.
+                    Home to the national stock exchange, it’s a financial hub also known for its high-end restaurants
+                    and shops. The Gothic Duomo di Milano cathedral and the Santa Maria delle Grazie convent, housing
+                    Leonardo da Vinci’s mural “The Last Supper,” testify to centuries of art and culture.
+                    The cathedral shares the central Piazza del Duomo with the Galleria Vittorio Emanuele II. This
+                    glass-roofed, 19th-century arcade is now home to luxury shopping and upscale cafes serving classic
+                    Milanese food such as risotto and osso buco veal stew. Milan’s cultural scene centers on the
+                    18th-century Teatro alla Scala opera house and the Pinacoteca di Brera gallery, which houses
+                    centuries of Italian painting by artists such as Titian and Caravaggio. Twice a year the
+                    Quadrilatero d'Oro fashion district buzzes when catwalks take over neoclassical palaces for the
+                    famous Milan Fashion Weeks.</p>
+            </div>
+            <div class="portfolio__card" style="background-image: url('assets/images/dusseldorf.jpeg')">
+                <h1>Düsseldorf</h1>
+                <h4>City in Germany</h4>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7067.061575125155!2d6.777162889594506!3d51.2267463445605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8c97bf1465907%3A0x42760fc4a2a73b0!2sD%C3%BCsseldorf%2C%20Germany!5e0!3m2!1sen!2sro!4v1582032040278!5m2!1sen!2sro"
+                            width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <p>Düsseldorf is a city in western Germany known for its fashion industry and art scene. It's divided by
+                    the Rhine River, with its Altstadt (Old Town) on the east bank and modern commercial areas to the
+                    west. In the Altstadt, St. Lambertus Church and Schlossturm (Castle Tower) both date to the 13th
+                    century. Streets such as Königsallee and Schadowstrasse are lined with boutique shops.
+                    Barhopping is a popular pastime in the numerous pubs that pack the Altstadt. The Rhine embankment
+                    promenade, lined with cafes and pubs, connects the Altstadt to Media Harbour, home to a range of
+                    notable modern architecture. Kaiserswerth, a district in the north, offers historic homes and the
+                    ruins of Kaiserpfalz Palace, as well as cafes and beer gardens. The Museum Kunstpalast displays
+                    works of art from the Middle Ages to the present. Outside the city, Schloss Benrath is an
+                    18th-century baroque palace.</p>
+            </div>
+            <div class="portfolio__card" style="background-image: url('assets/images/cologne.jpg')">
+                <h1>Cologne</h1>
+                <h4>City in Germany</h4>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.0503568682097!2d6.95608735150223!3d50.94128175965644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25a5369c3d2f%3A0x29ec913896e3a9c6!2sCologne%20Cathedral!5e0!3m2!1sen!2sro!4v1582031955854!5m2!1sen!2sro"
+                            width="600" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <p>Cologne, a 2,000-year-old city spanning the Rhine River in western Germany, is the region’s cultural
+                    hub. A landmark of High Gothic architecture set amid reconstructed old town, the twin-spired Cologne
+                    Cathedral is also known for its gilded medieval reliquary and sweeping river views. The adjacent
+                    Museum Ludwig showcases 20th-century art, including many masterpieces by Picasso, and the
+                    Romano-Germanic Museum houses Roman antiquities.
+                    Old town’s other highlights include the circa-1861 Wallraf-Richartz Museum, with a vast collection
+                    of 13th- to early-20th-century artwork, as well as celebrated contemporary art galleries. The
+                    Schnütgen Museum displays medieval religious art within St. Cecilia’s Church, one of old town’s 12
+                    Romanesque churches. The waterfront Schokoladen Museum honors the art of chocolate-making, while the
+                    Fragrance Museum marks the 1709 birthplace of eau de Cologne. The Zoological Garden and neighboring
+                    Botanical Garden occupy parkland near the Kölner Seilbahn, a cable car running across the Rhine.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer__contact">
+        <div class="container">
+            <div class="footer__contact__logo">
+                <span class="logo">
+                    <i class="fas fa-map-marked-alt"></i>
+                    T.W.M
+                </span>
+                <h4>Thanks for your interest in Travel With Me. For more information, feel free to get in touch.</h4>
+            </div>
+            <form class="footer__contact__form">
+                <input type="text" name="name" placeholder="Full Name *"/>
+                <input type="email" name="email" placeholder="Email Address *"/>
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea placeholder="Message"></textarea>
+                <button type="button">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer__bar">
+        <div class="container">
+            <p class="long">Copyright 2020 Travel With Me | All Right Reserved.</p>
+            <p class="short">&copy;2020</p>
+            <div class="footer__bar__social">
+                <p class="long">Find us on:</p>
+                <a href="#"> <img src="assets/images/flickr.png" alt="flickr"></a>
+                <a href="#"><img src="assets/images/vimeo.png" alt="vimeo"></a>
+                <a href="#"><img src="assets/images/pinterest.png" alt="pinterest"></a>
+                <a href="#"><img src="assets/images/twitter.png" alt="twitter"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
 </html>

@@ -42,8 +42,10 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "image-webpack-loader": "^5.0.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-leaf-carousel": "^2.0.0"
   }
 }
