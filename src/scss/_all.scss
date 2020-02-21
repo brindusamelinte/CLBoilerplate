@@ -1,17 +1,11 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  color: $defaultColor;
+  @include resetAll;
 }
 
 .logo {
   font-size: 2rem;
   font-family: 'Pacifico', cursive;
-  color: $logo;
+  color: $logoCl;
 }
 
 .container {
@@ -33,11 +27,9 @@ li {
 .first_content {
   width: 100%;
   height: 130px;
-  background-color: #5d228c;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 30px;
+  background-color: $hfBkgCl;
+  @include displayFlex;
 
   .menu {
     width: 20%;
@@ -58,18 +50,18 @@ li {
   .navigation {
     display: none;
     @media only screen and (min-width: 365px) {
-      color: white;
+      width: 70%;
+      color: $wCl;
       display: flex;
       align-items: center;
-      width: 70%;
     }
 
     .navigation__main__list {
       width: 70%;
 
       .navigation__list {
-        display: flex;
         list-style-type: none;
+        display: flex;
 
         .hover:hover .navigation__list__child {
           display: block;
@@ -80,12 +72,12 @@ li {
           position: relative;
 
           .navigation__list__child {
-            display: none;
             font-size: 14px;
-            border: 1px solid #5d228c;
-            background-color: #5d228c;
             list-style-type: none;
+            background-color: $hfBkgCl;
+            border: 1px solid $hfBkgCl;
             border-radius: 0 0 10px 10px;
+            display: none;
             position: absolute;
             padding: 10px;
 
@@ -96,7 +88,7 @@ li {
 
           .navigation__link {
             text-decoration: none;
-            color: white;
+            color: $wCl;
           }
         }
 
@@ -107,13 +99,12 @@ li {
       width: 30%;
 
       .navigation__list {
-        display: flex;
         list-style-type: none;
+        display: flex;
         justify-content: space-around;
 
         .hover:hover .navigation__list__child {
           display: block;
-
         }
 
         .navigation__item {
@@ -121,47 +112,40 @@ li {
           position: relative;
 
           .navigation__list__child {
-            display: none;
             font-size: 14px;
-            border: 1px solid #5d228c;
-            background-color: #5d228c;
             list-style-type: none;
+            border: 1px solid $hfBkgCl;
             border-radius: 0 0 10px 10px;
+            background-color: $hfBkgCl;
+            display: none;
             position: absolute;
             padding: 10px;
 
             li {
               padding-bottom: 10px;
             }
-
           }
         }
       }
     }
   }
-
 }
-
 
 // HEADER SECOND CONTENT
 
 .second_content {
   width: 100%;
-  color: grey;
-  background-color: #c391e0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   height: 900px;
+  color: $hfBkgCl;
+  background-color: #c391e0;
+  @include bkgImg;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
 
   .container {
-    display: flex;
+    @include displayFlex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 
     h1, h3 {
       padding-bottom: 20px;
@@ -169,14 +153,15 @@ li {
 
     .search__cities {
       height: 50px;
-      display: flex;
-      background-color: white;
+      padding-top: 5px;
+      background-color: $wCl;
       border-radius: 15px;
       border: 3px solid #a667d0;
+      display: flex;
 
       div.search {
-        background-color: white;
         width: 10%;
+        background-color: $wCl;
         border-radius: 15px 0 0 15px;
         display: flex;
         flex-direction: column;
@@ -187,28 +172,28 @@ li {
       input.search {
         width: 65%;
         height: 100%;
-        border: 1px solid white;
+        border: 1px solid $wCl;
       }
 
       button.search {
-        width: 25%;
+        //width: 25%;
+        width:50px;
         height: 100%;
-        border: 1px solid white;
+        color: $wCl;
+        border: 1px solid $wCl;
         border-radius: 15px;
-        background-color: #5d228c;
-        color: white;
+        background-color: $hfBkgCl;
       }
     }
   }
 }
 
-
 // SECTION GALLERY
 
 .gallery {
-  position: relative;
+  color: $wCl;
   margin: 10px 0;
-  color: white;
+  position: relative;
 
   ul {
     .hide_cities {
@@ -232,48 +217,46 @@ li {
   .arrow_left {
     width: 60px;
     height: 40px;
+    border-radius: 10px;
+    border: 1px solid #a667d0;
+    background-color: #a667d0;
     position: absolute;
     top: 140px;
     left: -10px;
-    border-radius: 10px;
-    background-color: #a667d0;
-    border: 1px solid #a667d0;
   }
 
   .arrow_right {
     width: 60px;
     height: 40px;
+    border-radius: 10px;
+    border: 1px solid #a667d0;
+    background-color: #a667d0;
     position: absolute;
     top: 140px;
     right: -10px;
-    border-radius: 10px;
-    background-color: #a667d0;
-    border: 1px solid #a667d0;
   }
 
   li {
     width: 100%;
-    border-radius: 30px;
     height: 300px;
+    border-radius: 30px;
+    background: linear-gradient(0deg, rgba(222, 169, 231, 1) 0%, rgba(45, 245, 253, 1) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: linear-gradient(0deg, rgba(222,169,231,1) 0%, rgba(45,245,253,1) 100%);
+    margin-bottom: 10px;
     @media only screen and (min-width: 365px) {
       width: 40%;
       margin-right: 10px;
-      }
+    }
   }
-
-
 }
-
 
 // SECTION PORTFOLIO
 
 .portfolio {
-  background-color: #FFFFFF;
+  background-color: $wCl;
 
   .portfolio__header {
     height: 200px;
@@ -293,36 +276,34 @@ li {
       display: block;
       width: 30%;
       height: 5px;
-      background-color: $logo;
+      background-color: $logoCl;
       position: absolute;
       top: 100px;
       left: 120px;
       @media only screen and (min-width: 365px) {
         width: 10%;
         top: 100px;
-        left: 530px;
+        left: 560px;
       }
     }
   }
 
   .portfolio__cards {
+    color: $wCl;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    color: white;
 
     .portfolio__card {
       width: 90%;
       height: 300px;
       border-radius: 30px;
+      padding: 30px;
+      margin-bottom: 15px;
+      @include bkgImg;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      padding: 30px;
-      margin-bottom: 15px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
       @media only screen and (min-width: 365px) {
         width: 40%;
       }
@@ -330,41 +311,87 @@ li {
       div, p {
         display: none;
       }
-
     }
 
+    .portfolio__card__shown {
+      width: 100%;
+      //height: 300px;
+      height: 100%;
+      color:$wCl;
+      border-radius: 30px;
+      padding: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      position: fixed;
+      top: 5px;
+      z-index: 1;
+      background-color:#c391e0;
+
+      .imgCity {
+        width:150px;
+        height: 70px;
+        padding-top: 5px;
+        @media only screen and (min-width: 365px) {
+          width:60%;
+          height: 300px;
+          padding-bottom: 10px;
+        }
+      }
+
+      .mapImg {
+        width:300px;
+        height: 50px;
+        padding-top: 5px;
+        @media only screen and (min-width: 365px) {
+          width:100%;
+          height: 100px;
+          padding-bottom: 10px;
+        }
+      }
+
+      @media only screen and (min-width: 365px) {
+        width: 40%;
+      }
+
+      div, p {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+    }
   }
-
 }
-
 
 // FOOTER
 
 footer {
   width: 100%;
-  color: #FFFFFF;
+  color: $wCl;
 
   .footer__contact {
     background-color: #a667d0;
-    padding-bottom: 10px;
+    padding-bottom: 90px;
+    @media only screen and (min-width: 365px) {
+      padding-bottom: 10px;
+    }
 
     .container {
-      flex-direction: column;
       height: 400px;
+      flex-direction: column;
       @media only screen and (min-width: 365px) {
         height: 350px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include displayFlex;
         flex-direction: row;
       }
 
       .footer__contact__logo {
+        margin-bottom: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 10px;
 
         span {
           margin-bottom: 15px;
@@ -376,9 +403,9 @@ footer {
       }
 
       .footer__contact__form {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        width: 100%;
         @media only screen and (min-width: 365px) {
           width: 35%;
         }
@@ -386,12 +413,22 @@ footer {
         input, textarea, button {
           width: 100%;
           padding: 10px;
-          margin-bottom: 10px;
-          border-radius: 30px;
-          border: 1px solid #c391e0;
-          background-color: #c391e0;
-          color: #FFFFFF;
+          color: $wCl;
           font-weight: 900;
+          margin-bottom: 10px;
+          border: 1px solid #c391e0;
+          border-radius: 30px;
+          background-color: #c391e0;
+        }
+
+        fieldset {
+          border: 1px solid #a667d0;
+          padding-top: 10px;
+          font-weight: bolder;
+        }
+
+        legend,span {
+          font-size: 13px;
         }
 
       }
@@ -399,13 +436,11 @@ footer {
   }
 
   .footer__bar {
-    background-color: #5d228c;
+    background-color: $hfBkgCl;
 
     .container {
       height: 80px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include displayFlex;
 
       .long {
         display: none;
@@ -422,9 +457,7 @@ footer {
       }
 
       .footer__bar__social {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include displayFlex;
 
         p {
           margin-right: 20px;
@@ -432,7 +465,6 @@ footer {
       }
     }
   }
-
 }
 
 

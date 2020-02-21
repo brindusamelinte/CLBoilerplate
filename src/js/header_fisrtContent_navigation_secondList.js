@@ -1,0 +1,1 @@
+module.exports = [ "Francais", "Deutsch","Italiano","Espanol"];

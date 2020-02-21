@@ -1,0 +1,17 @@
+@mixin resetAll {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin displayFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin bkgImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
